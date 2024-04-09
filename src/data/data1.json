@@ -1,0 +1,32 @@
+[
+  {
+    "bank": "BBVA Provincial",
+    "purchase": "261900",
+    "sale": "36.312"
+  },
+  {
+    "bank": "Banco Mercantil",
+    "purchase": "262193",
+    "sale": "361040"
+  },
+  {
+    "bank": "Banesco",
+    "purchase": "261007",
+    "sale": "36.107"
+  },
+  {
+    "bank": "Eancamiga",
+    "purchase": "258725",
+    "sale": "35,009"
+  },
+  {
+    "bank": "Banco Nacional de Crédito ENC-— 36,1502",
+    "purchase": "—",
+    "sale": "36,1185"
+  },
+  {
+    "bank": "Otras Instituciones 26,2207",
+    "purchase": "26,2207",
+    "sale": "36.2408"
+  }
+]

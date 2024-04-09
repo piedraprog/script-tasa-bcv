@@ -1,0 +1,25 @@
+{
+  "name": "script-tasa-bcv",
+  "version": "1.0.0",
+  "description": "script para hacer los png de la tasa del bcv ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-modules src/index.js",
+    "catch":"node --watch src/helpers/catchInfo.js",
+    "start:w": "node --watch src/index.js"
+  },
+  "keywords": [
+    "script",
+    "automation"
+  ],
+  "type": "module",
+  "author": "José Piedra",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "moment": "^2.30.1",
+    "puppeteer": "^22.6.3",
+    "tesseract.js": "^5.0.5"
+  }
+}
