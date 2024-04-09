@@ -25,6 +25,7 @@ Promise.all([
         const data = await utils.getImgData(filePath);
 
         switch (index) {
+          
           case 0:
             let changeData = utils.parseMoneyChange(data);
             await imgCreator.createImageTypeExchange(changeData);

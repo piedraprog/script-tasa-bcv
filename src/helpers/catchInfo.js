@@ -48,7 +48,7 @@ export const catchBanksRates = async () => {
 
   const x = 0; // Coordenada x del punto de inicio del recorte
   const y = 0; // Coordenada y del punto de inicio del recorte
-  const width = 800; // Ancho del área de recorte
+  const width = 750; // Ancho del área de recorte
   const height = 180; // Alto del área de recorte
   const browser = await puppeteer.launch(); // Iniciar el navegador
   const page = await browser.newPage(); // Abrir una nueva página
@@ -114,3 +114,8 @@ export const catchInterventionRates = async () => {
 
   await browser.close(); // Cerrar el navegador
 };
+
+
+await catchBanksRates().then(()=>{
+  console.log("listo")
+})

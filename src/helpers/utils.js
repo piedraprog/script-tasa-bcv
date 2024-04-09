@@ -1,7 +1,7 @@
 import fs from "fs";
 
 import { createWorker } from "tesseract.js";
-const worker = await createWorker("spa");
+const worker = await createWorker("eng");
 
 // LIMPIAR LA INFO DE LA PRIMERA IMAGEN
 export const parseMoneyChange = (data) => {
@@ -85,3 +85,5 @@ export const getImgData = async (imgPath) => {
   } = await worker.recognize(imgPath);
   return text;
 };
+
+// console.log(await getImgData('src/imgs/01.png'))
