@@ -114,8 +114,3 @@ export const catchInterventionRates = async () => {
 
   await browser.close(); // Cerrar el navegador
 };
-
-
-await catchBanksRates().then(()=>{
-  console.log("listo")
-})
