@@ -1,0 +1,1 @@
+Script que sirve para generar la tasa del bcv
