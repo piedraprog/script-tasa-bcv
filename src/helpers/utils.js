@@ -1,7 +1,15 @@
 import fs from "fs";
-
 import { createWorker } from "tesseract.js";
-const worker = await createWorker("eng");
+
+// Inicializar el worker de forma lazy
+let worker = null;
+
+const getWorker = async () => {
+  if (!worker) {
+    worker = await createWorker("eng");
+  }
+  return worker;
+};
 
 // LIMPIAR LA INFO DE LA PRIMERA IMAGEN
 export const parseMoneyChange = (data) => {
@@ -80,9 +88,10 @@ export const writeFileJson = async (data, number) => {
 
 // OBTENER LA INFORMACION DE LA DATA
 export const getImgData = async (imgPath) => {
+  const currentWorker = await getWorker();
   const {
     data: { text },
-  } = await worker.recognize(imgPath);
+  } = await currentWorker.recognize(imgPath);
   return text;
 };
 
