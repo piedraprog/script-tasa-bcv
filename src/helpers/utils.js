@@ -29,6 +29,13 @@ export const getBankName = (rowData) => {
   elementos.splice(-2);
   let bankName = elementos.join(" ");
 
+  // Aplicar cambios de nombres específicos
+  if (bankName.includes("BBVA Provincial")) {
+    bankName = "Banco Provincial";
+  } else if (bankName.includes("Banco Nacional de Crédito BNC")) {
+    bankName = "Banco Nacional de Crédito";
+  }
+
   return bankName;
 };
 
