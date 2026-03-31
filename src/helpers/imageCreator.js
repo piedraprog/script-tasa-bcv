@@ -19,7 +19,15 @@ const getNextDay = () => {
     }
 
     // Formatear la fecha en el formato deseado
-    return dateComplete.format("dddd, DD [de] MMMM YYYY");
+    let fecha = dateComplete.format("dddd, DD [de] MMMM YYYY");
+    
+    // Asegurar que el mes tenga la primera letra en mayúscula
+    // Buscar el patrón "de mes" y capitalizar la primera letra del mes
+    fecha = fecha.replace(/(\sde\s)([a-z])/g, (match, p1, p2) => {
+        return p1 + p2.toUpperCase();
+    });
+    
+    return fecha;
 }
 
 export const createImageTypeExchange = async (jsonData) => {
